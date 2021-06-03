@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  jenkins:
+    container_name: jenkins
+    build:
+      context: . #está olhando o Dockerfile que está no mesmo nível
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./docker/jenkins/:/var/jenkins_home
